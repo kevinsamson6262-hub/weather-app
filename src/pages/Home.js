@@ -136,7 +136,7 @@ function Home() {
           transition={{ duration: 0.8 }}
           className="mt-10 md:mt-0 relative"
         >
-          <img src="/weather-illustration-en.webp" alt="Weather Illustration" className="w-98 md:w-[38rem] drop-shadow-2xl animate-float" />
+          <img src={`${process.env.PUBLIC_URL}/weather-illustration-en.webp`} alt="Weather Illustration" className="w-98 md:w-[38rem] drop-shadow-2xl animate-float" />
           <div className="absolute -top-10 -left-10 w-24 h-24 bg-white/10 rounded-full blur-3xl animate-spin-slow" />
         </motion.div>
       </motion.section>
