@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Forecast from "./pages/Forecast";
 import MapPage from "./pages/MapPage";
@@ -13,21 +13,23 @@ import GoogleTranslate from "./components/GoogleTranslate";
 
 export default function App() {
   return (
-    <div className="app-shell">
-      <Navbar />
-      <GoogleTranslate />
-      <main className="main">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/forecast" element={<Forecast />} />
-          <Route path="/map" element={<MapPage />} />
-          <Route path="/trends" element={<Trends />} />
-          <Route path="/trip-planner" element={<WeatherGame />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/game" element={<Game />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
+    <HashRouter>
+      <div className="app-shell">
+        <Navbar />
+        <GoogleTranslate />
+        <main className="main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/forecast" element={<Forecast />} />
+            <Route path="/map" element={<MapPage />} />
+            <Route path="/trends" element={<Trends />} />
+            <Route path="/trip-planner" element={<WeatherGame />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/game" element={<Game />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </HashRouter>
   );
 }
